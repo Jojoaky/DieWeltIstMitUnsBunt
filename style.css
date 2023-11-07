@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@300;400&family=Quicksand&family=Rubik&family=Source+Code+Pro:wght@300&display=swap');
+
+body {
+    background-color:rgb(44, 44, 44);
+    color:antiquewhite;
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 50px;
+}
+
+h1 {
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 200px;
+}
+
+h2 {
+    font-size: 100px;
+}
+
+h3 {
+    font-size: 80px;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+a {
+    font-weight:bolder;
+    color:rgb(88, 88, 214);
+    text-decoration: none;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.moveable-text {
+    position: relative;
+    display: inline-block;
+    transform: translateX(0);
+    color:antiquewhite;
+}
