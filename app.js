@@ -48,7 +48,7 @@ const targets = [
         document.getElementById('section3'),
         document.getElementById('section4')
     ];
-const scrollSpeed = 0.04;
+const scrollSpeed = 0.02;
 
 document.addEventListener('scroll', (e) => {
     moveableLetters.forEach((letter, index) => {
