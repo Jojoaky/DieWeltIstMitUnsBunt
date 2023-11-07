@@ -57,7 +57,6 @@ document.addEventListener('scroll', (e) => {
         const windowY = Math.max((window.innerHeight / 2), letterY);
         const deltaY = Math.min((windowY - letterY) * 0.01, 8);
         letter.style.fontSize = `${Math.min(Math.max(8-deltaY, 4), 6)}vw`
-        if(index == 0)
     });
 
     const scrollY = window.scrollY;
