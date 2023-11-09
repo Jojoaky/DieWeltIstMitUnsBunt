@@ -8,11 +8,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const slideInElements = document.querySelectorAll('.hidden');
+const slideInElements = document.querySelectorAll('.flyIn');
 
 slideInElements.forEach((el) => observer.observe(el));
-
-
 
 const moveableText = document.querySelector('.moveable-text');
 const letters = Array.from(moveableText.textContent);
@@ -42,34 +40,18 @@ document.addEventListener('mousemove', (e) => {
     });
 });
 
-const targets = [
-        document.getElementById('section1'),
-        document.getElementById('section2'),
-        document.getElementById('section3'),
-        document.getElementById('section4')
-    ];
-const scrollSpeed = 0.02;
-
-document.addEventListener('scroll', (e) => {
+function update() {
     moveableLetters.forEach((letter, index) => {
         const letterRect = letter.getBoundingClientRect();
         const letterY = letterRect.top + letterRect.height / 2;
         const windowY = Math.max((window.innerHeight / 2), letterY);
         const deltaY = Math.min((windowY - letterY) * 0.01, 8);
-        letter.style.fontSize = `${Math.min(Math.max(8-deltaY, 4), 6)}vw`
+        letter.style.fontSize = `${Math.max(8-deltaY, 4)}vw`
+        if(index == 0)
+        console.log(letter.style.fontSize);
     });
-
-    const scrollY = window.scrollY;
-
-        // Calculate the position to scroll towards based on the closest target.
-        const target = targets.reduce((closest, current) => {
-            const currentY = current.getBoundingClientRect().top;
-            return Math.abs(currentY) < Math.abs(closest) ? currentY : closest;
-        }, Infinity);
-
-        // Smoothly scroll towards the target position.
-        window.scrollBy(0, target * scrollSpeed);
-});
+}
+setInterval(update, 1);
 
 // Blend two colors in the HSL space
 function blendColors(color1, color2, factor) {
