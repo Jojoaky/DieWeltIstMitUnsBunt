@@ -23,6 +23,10 @@ h3 {
     font-family: 'Source Code Pro', sans-serif;
 }
 
+h4 {
+    font-size: 3vw;
+}
+
 a {
     font-weight:bolder;
     color:rgb(88, 88, 214);
@@ -34,6 +38,10 @@ section {
     place-items: center;
     align-content: center;
     min-height: 100vh;
+}
+
+p {
+    margin: 10px;
 }
 
 .container {
@@ -73,4 +81,24 @@ section {
     display: inline-block;
     transform: translateX(0);
     color:antiquewhite;
+}
+
+#amount {
+    height: 2vw;
+    border-radius: 5px;
+    /*transform: translateY(-30%);*/
+    background-color: rgb(60,60,60);
+    border: none;
+    color:antiquewhite;
+    font-size: 2vw;
+}
+
+#donate {
+    height: 3vw;
+    border-radius: 5px;
+    color: antiquewhite;
+    background-color: rgb(60, 60, 60);
+    border: none;
+    font-size: 2vw;
+    cursor: pointer;
 }
