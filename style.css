@@ -36,10 +36,29 @@ section {
     min-height: 100vh;
 }
 
-.hidden {
+.container {
+    flex: none;
+    overflow: auto;
+    width: 100%;
+    height: 99vh;
+    flex-flow: column nowrap;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+.container > section {
+    scroll-snap-align: center;
+    flex: none;
+}
+
+.child {
+    scroll-snap-align: start;
+}
+
+.flyIn {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
+    transform: translateX(-50%);
     transition: all 1s;
 }
 
