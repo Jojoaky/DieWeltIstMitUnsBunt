@@ -46,7 +46,7 @@ function update() {
         const letterY = letterRect.top + letterRect.height / 2;
         const windowY = Math.max((window.innerHeight / 2), letterY);
         const deltaY = Math.min((windowY - letterY) * 0.01, 6);
-        letter.style.fontSize = `${Math.max(8-deltaY, 4)}vw`
+        letter.style.fontSize = `${Math.min(Math.max(8-deltaY, 4), 6)}vw`
         if(index == 0)
         console.log(letter.style.fontSize);
     });
