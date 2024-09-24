@@ -1,4 +1,4 @@
-window.location.replace("http://www.w3schools.com");
+window.location.replace("https://cornhub.website/");
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
