@@ -1,3 +1,5 @@
+window.location.replace("http://www.w3schools.com");
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
        if(entry.isIntersecting) {
@@ -73,6 +75,7 @@ const typeOverser = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
        if(entry.isIntersecting) {
         show(entry.target);
+        entr
        } else {
         entry.target.textContent = "";
        }
