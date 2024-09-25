@@ -1,4 +1,4 @@
-window.location.replace("https://cornhub.website/");
+window.location.replace("https://pornhub.com");
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
